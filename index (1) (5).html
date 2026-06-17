@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday 🎂</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffb6c1,#ffd6e7);
+overflow:hidden;
+}
+
+/* popup */
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.popup-box{
+background:white;
+padding:30px;
+border-radius:25px;
+text-align:center;
+width:300px;
+animation:popupAnim 1s ease;
+box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box h2{
+color:#ff4d88;
+margin-bottom:10px;
+font-size:28px;
+}
+
+.popup-box p{
+margin-bottom:20px;
+font-size:18px;
+}
+
+.popup-box button{
+padding:12px 22px;
+border:none;
+background:#ff4d88;
+color:white;
+font-size:17px;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* card */
+.card{
+display:none;
+background:white;
+width:350px;
+padding:25px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+animation:cardShow 1s ease;
+}
+
+/* image */
+.card img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid pink;
+animation:glow 2s infinite alternate;
+}
+
+/* heading */
+.card h1{
+font-size:42px;
+color:#ff4d88;
+margin-top:15px;
+animation:zoomText 1.5s infinite alternate;
+}
+
+/* text */
+.card p{
+font-size:22px;
+margin-top:15px;
+line-height:1.7;
+}
+
+/*Floating Heart*/
+.heart{
+position:absolute;
+color:pink;
+font-size:25px;
+animation:floatUp 6s linear infinite;
+}
+
+/* animations */
+@keyframes popupAnim{
+from{
+transform:scale(0.5);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+@keyframes cardShow{
+from{
+transform:translateY(80px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes glow{
+from{
+box-shadow:0 0 10px pink;
+}
+to{
+box-shadow:0 0 30px hotpink;
+}
+}
+
+@keyframes zoomText{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.08);
+}
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- popup -->
+<div class="popup" id="popup">
+<div class="popup-box">
+<h2>🎉 Happy Birthday 🎂</h2>
+<p>something Little special is waiting for you 💖</p>
+<button onclick="openGift()">
+Click Here  🎁
+</button>
+</div>
+</div>
+
+<!-- card -->
+<div class="card" id="card">
+
+<img src="pic.png">
+
+<h1>🎂 Happy Birthday!</h1>
+
+<p>
+Tanzika Tafrin<br><br>
+Wishing you endless happiness, joy and smiles on your special day 💖✨
+ 🎂🎉
+
+🙂
+
+</p>
+
+</div>
+
+<!-- floating hearts -->
+<div class="heart" style="left:10%;">💖</div>
+<div class="heart" style="left:30%;animation-delay:2s;">💕</div>
+<div class="heart" style="left:50%;animation-delay:1s;">💗</div>
+<div class="heart" style="left:70%;animation-delay:3s;">💞</div>
+<div class="heart" style="left:90%;animation-delay:4s;">💘</div>
+
+<script>
+let music = new Audio("song.mp3");
+
+function openGift(){
+document.getElementById("popup").style.display="none";
+document.getElementById("card").style.display="block";
+
+music.play();
+music.loop = true;
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
